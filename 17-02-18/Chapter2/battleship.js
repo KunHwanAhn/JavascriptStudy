@@ -18,12 +18,15 @@ while (isSunk === false) {
     guesses++;
 
     if (guess === LOCATION1 || guess === LOCATION2 || guess === LOCATION3) {
+      alert('명중!');
       hits++;
 
       if (hits === 3) {
         isSunk = true;
         alert('전함 침몰!');
       }
+    } else {
+      alert('실패!');
     }
   }
 }
