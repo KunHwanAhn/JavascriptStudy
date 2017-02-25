@@ -1,11 +1,12 @@
-var LOCATION1 = 3,
-    LOCATION2 = 4,
-    LOCATION3 = 5;
-
 var guess,
     hits = 0,
     guesses = 0,
-    stats;
+    stats,
+    randomLoc = Math.floor(Math.random() * 5);
+
+var LOCATION1 = randomLoc,
+    LOCATION2 = randomLoc + 1,
+    LOCATION3 = randomLoc + 2;
 
 var isSunk = false;
 
