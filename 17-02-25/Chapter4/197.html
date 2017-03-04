@@ -1,0 +1,36 @@
+<script type="text/javascript">
+  var SCORES = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54];
+
+  var highscore,
+      bestSolutions = [],
+      output,
+      i;
+
+  function printAndGetHighScore(socres) {
+    var result = 0,
+        i;
+
+    for (i = 0; i < socres.length; i++) {
+      output = '비눗방울 용액 #' + i + ' 점수:' + SCORES[i];
+      console.log(output);
+
+      if (SCORES[i] > result) {
+        result = SCORES[i];
+      }
+    }
+
+    return result;
+  }
+
+  highscore = printAndGetHighScore(SCORES);
+
+  for (i = 0; i < SCORES.length; i++) {
+    if (SCORES[i] === highscore) {
+      bestSolutions.push(i);
+    }
+  }
+
+  console.log('비눗방울 실험횟수:', i);
+  console.log('최고 비눗방울 점수:', highscore);
+  console.log('최고 점수 용액 번호:', bestSolutions);
+</script>

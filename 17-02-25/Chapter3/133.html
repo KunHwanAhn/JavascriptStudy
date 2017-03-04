@@ -1,0 +1,18 @@
+<script type="text/javascript">
+  function bake(degrees) {
+    var message;
+
+    if (degrees > 500) {
+      message = "저는 원자로가 아닙니다.";
+    } else if (degrees < 100) {
+      message = "저는 냉장고가 아닙니다.";
+    } else {
+      message = "저에게 딱 맞는 온도네요.";
+    }
+    return message;
+  }
+
+  var status = bake(350);
+
+  console.log('Return value:', status);
+</script>

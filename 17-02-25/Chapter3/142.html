@@ -1,0 +1,13 @@
+<script type="text/javascript">
+  var beanCounter = 10;
+  function getNumberOfItems(ordertype) {
+    var beanCounter = 0;
+    if (ordertype == 'order') {
+      // 지역변수 beanCounter 를 이용한 연산을 수행합니다.
+      beanCounter = 1;
+    }
+    return beanCounter;
+  }
+
+  console.log(getNumberOfItems('order'));
+</script>

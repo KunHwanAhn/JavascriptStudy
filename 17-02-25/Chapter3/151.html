@@ -1,0 +1,23 @@
+<script type="text/javascript">
+  var balance = 10500;
+  var cameraOn = true;
+
+  function steal(balance, amount) {
+    cameraOn = false;
+
+    if ( amount < balance) {
+      // 전역변수가 아닌, 지역번수로만 연산을 했기 때문에 전연변수를 사용하는 연산이 아님
+      balance = balance - amount;
+    }
+
+    return amount;
+
+    // cameraOn은 return 다음에 변경했기 때문에 반영되지 않는 코드
+    cameraOn = true;
+  }
+
+  var amount = steal(balance, 1250);
+
+  alert("범인, 당신은 " + amount + "를 훔쳤습니다.");
+
+</script>

@@ -1,0 +1,15 @@
+<script type="text/javascript">
+  // 'use strict';
+  // 'use strict';를 사용할 경우, points가 선언되어 있지 않다는 Error를 Browser에서 검출한다.
+  // 사용하지 않는 경우, 아래 points 변수는 전역변수가 된다.
+  function playTurn(player, location) {
+    points = 0;
+    if (location == 1) {
+      points = points * 100;
+    }
+    return points;
+  }
+
+  var total = playTurn("재희", 1);
+  alert(points);
+</script>
