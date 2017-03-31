@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+    body, button {
+      margin: 10px;
+    }
+    div {
+      padding: 10px;
+    }
+  </style>
+  <script type="text/javascript">
+    // With Closure
+    window.onload = function () {
+      var count = 0,
+          message,
+          button = document.getElementById('clickme')
+          div = document.getElementById('message');
+
+      button.onclick = function () {
+        count++;
+        message = 'I was clicked, ' + count + 'times';
+        div.innerHTML = message;
+      }
+    }
+
+
+    // Without Closure
+    // var count = 0;
+
+    // window.onload = function (argument) {
+    //   var button = document.getElementById('clickme');
+
+    //   button.onclick = handleClick;
+    // };
+
+    // function handleClick() {
+    //   var message,
+    //       div = document.getElementById('message');
+
+    //   count++;
+    //   message = 'I was clicked, ' + count + 'times';
+    //   div.innerHTML = message;
+    // }
+  </script>
+</head>
+<body>
+  <button id="clickme">Click Me</button>
+  <div id="message"></div>
+</body>
+</html>
