@@ -16,15 +16,15 @@
     window.onload = function () {
       var count = 0,
           message,
-          button = document.getElementById('clickme')
+          button = document.getElementById('clickme'),
           div = document.getElementById('message');
 
       button.onclick = function () {
         count++;
         message = 'I was clicked, ' + count + 'times';
         div.innerHTML = message;
-      }
-    }
+      };
+    };
 
 
     // Without Closure
