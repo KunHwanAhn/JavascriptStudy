@@ -1,0 +1,16 @@
+<script type="text/javascript">
+  function Dog(name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+  }
+
+  var fido = new Dog('fido', 'Mixed', 38),
+      fluffy = new Dog('fluffy', '푸들', 30),
+      spot = new Dog('spot', '치와와', 10),
+      dogs = [ fido, fluffy, spot ];
+
+  for (var i = 0; i < dogs.length; i++) {
+    console.log(dogs[i].name, dogs[i].weight, dogs[i].breed);
+  }
+</script>
