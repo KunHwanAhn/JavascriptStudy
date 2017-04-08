@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+    var migrating = true;
+
+    var fly = function (num) {
+      var sound = 'fly';
+
+      function wingFlapper() {
+        console.log(sound);
+      }
+
+      for (var i = 0; i < num; i++) {
+        wingFlapper();
+      }
+    }
+
+    function quack(num) {
+      var sound = 'quack';
+
+      var quacker = function () {
+        console.log(sound);
+      }
+
+      for (var i = 0; i < num; i++) {
+        quacker();
+      }
+    }
+
+    if (migrating) {
+      quack(4);
+      fly(4);
+    }
+
+    // Error occured code lines
+    // if (migrating) {
+    //   quack(4);
+    //   fly(4);
+    // }
+
+    // var fly = function (num) {
+    //   for (var i = 0; i < num; i++) {
+    //     console.log('fly');
+    //   }
+    // }
+
+    // function quack(num) {
+    //   for (var i = 0; i < num; i++) {
+    //     console.log('quack');
+    //   }
+    // }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

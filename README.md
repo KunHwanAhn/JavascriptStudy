@@ -17,3 +17,11 @@
 
 ## 17-03-26
 - Chapter 8
+
+## 17-03-31
+- Chapter 9
+- Chapter 10
+- Chapter 11
+
+## 17-04-01
+- Chapter 12

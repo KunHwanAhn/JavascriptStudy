@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Function as a parameter</title>
+  <script type="text/javascript">
+    var allCanFly,
+        allPaid;
+
+    var passengers = [
+      { name: 'A', paid: true },
+      { name: 'B', paid: true },
+      { name: 'C', paid: false },
+      { name: 'D', paid: true }
+    ];
+
+    function checkNoFlyList(passenger) {
+      return passenger.name === 'C';
+    }
+
+    function checkNotPaid(passenger) {
+      return !passenger.paid;
+    }
+
+    function processPassengers(_passengers, testFunction) {
+      for (var i = 0; i < _passengers.length; i++) {
+        if (testFunction(_passengers[i])) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    allCanFly = processPassengers(passengers, checkNoFlyList);
+    allPaid = processPassengers(passengers, checkNotPaid);
+
+    if (!allCanFly) {
+      console.log('비행기가 이륙할 수 없습니다. 승객 중 출국 금지자가 있습니다.');
+    }
+
+    if (!allPaid) {
+      console.log('비행기가 이륙할 수 없습니다. 요금을 지불하지 않은 승객이 있습니다.');
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+  var justAVar = 'Global Variable';
+
+  function whereAreYou() {
+    var justAVar = 'Local Variable';
+
+    function inner() {
+      return justAVar;
+    }
+
+    return inner();
+  }
+
+  var result = whereAreYou();
+  console.log(result);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
