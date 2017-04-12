@@ -1,0 +1,65 @@
+<script type="text/javascript">
+  function Dog(name, breed, weight) {
+    this.name = name;
+    this.breed = breed;
+    this.weight = weight;
+  }
+
+  Dog.prototype.species = 'Dog';
+
+  Dog.prototype.size = function () {
+    if (this.weight > 25) {
+      alert(this.name + ' is big');
+    } else {
+      alert(this.name + ' is small');
+    }
+  };
+
+  Dog.prototype.run = function() {
+    console.log(this.name + ' run!');
+  };
+
+  Dog.prototype.wag = function() {
+    console.log(this.name + ' wag');
+  };
+
+  var fido = new Dog('Fido', 'Mixed', 38);
+  var fluffy = new Dog('Fluffy', '푸들', 10);
+  var spot = new Dog('Spot', '치와와', 10);
+
+  spot.size = function () {
+    alert(this.name + ' is medium');
+  };
+
+  fido.size();
+  fido.run();
+  fido.wag();
+
+  fluffy.size();
+  fluffy.run();
+  fluffy.wag();
+
+  spot.size();
+  spot.run();
+  spot.wag();
+
+  // Memory problem occured
+  // Too many same methods on memory
+  // function Dog(name, breed, weight) {
+  //   this.name = name;
+  //   this.breed = breed;
+  //   this.weight = weight;
+
+  //   this.size = function () {
+  //     if (this.weight > 25) {
+  //       alert(this.name + ' is big');
+  //     } else {
+  //       alert(this.name + ' is small');
+  //     }
+  //   };
+  // }
+
+  // var fido = new Dog('Fido', 'Mixed', 38);
+  // var fluffy = new Dog('Fluffy', '푸들', 10);
+  // var spot = new Dog('Spot', '치와와', 10);
+</script>
